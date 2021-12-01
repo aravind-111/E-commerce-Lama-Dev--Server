@@ -9,7 +9,7 @@ const schema = {
       img: { type: String, required: true },
       categories: { type: Array },
       size: { type: Array },
-      color: { type: String },
+      color: { type: Array },
       price: { type: Number, required: true },
       inStock: { type: Boolean, default: true },
     },

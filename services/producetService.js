@@ -74,9 +74,20 @@ const getAllProducts = async (req, res) => {
   }
 };
 
+// GET SINGLE PRODUCT
+const getSingleProduct = async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id);
+    res.status(200).send(product);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+};
+
 module.exports = {
   createProduct,
   updateProduct,
   deleteProduct,
   getAllProducts,
+  getSingleProduct,
 };
